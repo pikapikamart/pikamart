@@ -1,4 +1,5 @@
 import { MainHeader } from "./components/layout/header/main"
+import { HomeHero } from "./components/pages/home/hero"
 
 
 const Root = () =>{
@@ -6,7 +7,9 @@ const Root = () =>{
   return (
     <>
       <MainHeader />
-      <main></main>
+      <main className="px-[clamp(16px,5vw,64px)]">
+        <HomeHero />
+      </main>
     </>
   )
 }

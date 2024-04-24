@@ -3,7 +3,9 @@
 const Home = () =>{
 
   return (
-    <main></main>
+    <main className="">
+
+    </main>
   )
 }
 

@@ -13,6 +13,11 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      fontFamily: {
+        quicksand: ["var(--font-quicksand_sans)"],
+        poppins: ["var(--font-poppins_sans)"],
+        merriweather: ["var(--font-merriweather_sans_serif)"],
+      }
     },
   },
   plugins: [],

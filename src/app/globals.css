@@ -7,4 +7,16 @@
   .leading-main {
     line-height: 1.5;
   }
+
+  .heading-default {
+    font-family: var(--font-merriweather_sans_serif);
+    font-weight: 700;
+    font-size: clamp(32px,5vw,56px);
+    letter-spacing: -2px;
+  }
+
+  .max-w-default {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
 }

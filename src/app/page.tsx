@@ -1,13 +1,15 @@
+import { MainHeader } from "./components/layout/header/main"
 
 
-const Home = () =>{
+const Root = () =>{
 
   return (
-    <main className="">
-
-    </main>
+    <>
+      <MainHeader />
+      <main></main>
+    </>
   )
 }
 
 
-export default Home
+export default Root

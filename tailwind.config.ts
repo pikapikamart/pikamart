@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
+  mode: "jit",
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -17,6 +18,10 @@ const config: Config = {
         quicksand: ["var(--font-quicksand_sans)"],
         poppins: ["var(--font-poppins_sans)"],
         merriweather: ["var(--font-merriweather_sans_serif)"],
+      },
+      colors: {
+        "dark-one": "#101217",
+        "yellow-one": "#FFCB00"
       }
     },
   },

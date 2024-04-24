@@ -21,7 +21,7 @@ const RootLayout = ({ children }: RootLayoutProps) =>{
 
   return (
     <html lang="en">
-      <body className={`${ quicksand_sans } ${ poppins_sans } ${ merriweather_sans_serif }`}>
+      <body className={`${ quicksand_sans } ${ poppins_sans } ${ merriweather_sans_serif } font-quicksand`}>
         {children}
       </body>
     </html>

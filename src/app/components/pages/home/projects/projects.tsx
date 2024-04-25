@@ -23,12 +23,12 @@ const Projects = () =>{
         key={`project-${ project.title }`}>
         <div className={`${ isProjectRow(project) && "lg:max-w-[clamp(520px,41vw,656px)]" } ${ isProjectRow(project) && isLastIndex(index) && "ms-auto" } relative z-10`}>
           <img 
-            className={`max-h-[clamp(16px,2vw,26px)] mb-4 ${ isLastIndex(index) && "ms-auto" }`}
+            className={`max-h-[clamp(16px,2vw,26px)] mb-4 ${ isLastIndex(index) && "lg:ms-auto" }`}
             src={`/projects/${ project.logo }`} 
             alt={`${ project.title }`} />
-          <h3 className={`font-poppins font-bold text-[clamp(32px,6vw,56px)] leading-[1.25] mb-4 ${ project.color==="white"? "text-white" : "text-dark-one" } ${ isProjectRow(project) && isLastIndex(index) && "text-right" }`}>{ project.title }</h3>
-          <p className={`text-[clamp(14px,1.5vw,16px)] leading-main mb-6 ${ project.color==="white"? "text-white" : "text-dark-one" } ${ isProjectRow(project) && isLastIndex(index) && "text-right" }` }>{ project.description }</p>
-          <ul className={`flex flex-wrap w-full gap-2 ${ (!!project.site || !!project.github) && "mb-6" } ${ isProjectRow(project) && isLastIndex(index) && "justify-end" }`}>
+          <h3 className={`font-poppins font-bold text-[clamp(32px,6vw,56px)] leading-[1.25] mb-4 ${ project.color==="white"? "text-white" : "text-dark-one" } ${ isProjectRow(project) && isLastIndex(index) && "lg:text-right" }`}>{ project.title }</h3>
+          <p className={`text-[clamp(14px,1.5vw,16px)] leading-main mb-6 ${ project.color==="white"? "text-white" : "text-dark-one" } ${ isProjectRow(project) && isLastIndex(index) && "lg:text-right" }` }>{ project.description }</p>
+          <ul className={`flex flex-wrap w-full gap-2 ${ (!!project.site || !!project.github) && "mb-6" } ${ isProjectRow(project) && isLastIndex(index) && "lg:justify-end" }`}>
             { project.stacks.map(stack => (
               <li
                 className={`text-[clamp(12px,1vw,14px)] py-[6px] px-2 rounded border-[.5px] ${ project.color==="white"? "text-white border-white" : "text-dark-one border-dark-one" }`}
@@ -37,7 +37,7 @@ const Projects = () =>{
               </li>
             )) }
           </ul>
-          <div className={`flex ${ isProjectRow(project) && isLastIndex(index) && "justify-end" }`}>
+          <div className={`flex ${ isProjectRow(project) && isLastIndex(index) && "lg:justify-end" }`}>
             { !!project.site && (
               <a
                 className="mr-4" 
@@ -92,7 +92,7 @@ const Projects = () =>{
   }
 
   return (
-    <div className="px-[clamp(16px,4vw,64px)] mb-[clamp(80px,15vw,128px)] max-w-default">
+    <div className="px-[clamp(16px,4vw,64px)] max-w-default !mb-[clamp(80px,15vw,128px)]">
       <div className="lg:flex lg:justify-between lg:items-center mb-[clamp(48px,7vw,96px)]">
         <h2 
           className="heading-default mb-[clamp(16px,1vw,24px)] text-dark-one leading-[1] lg:mb-0"

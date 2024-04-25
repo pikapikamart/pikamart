@@ -4,7 +4,7 @@ import Link from "next/link"
 const Main = () =>{
 
   return (
-    <header className="flex items-center justify-between px-4 lg:px-16 h-[clamp(64px,9vw,80px)]">
+    <header className="flex items-center justify-between px-4 lg:px-16 h-[clamp(64px,9vw,80px)] max-w-default">
       <Link
         className="font-merriweather font-bold text-[clamp(24px,3vw,32px)]" 
         href="#">

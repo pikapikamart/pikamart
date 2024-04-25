@@ -71,9 +71,9 @@ const Tools = () =>{
         className="heading-default mb-[clamp(16px,1vw,24px)] text-dark-one lg:text-center"
         id="about">Tools that I use
       </h2>
-      <p className="leading-main text-dark-one text-[clamp(16px,2vw,20px)] mb-6 max-w-[960px] lg:text-center lg:mx-auto">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi, iusto.</p>
+      <p className="leading-main text-dark-one text-[clamp(16px,2vw,20px)] mb-[clamp(24px,4vw,40px)] max-w-[800px] lg:text-center lg:mx-auto">With my trusted stacks in hand, I embark on the journey of web development, transforming ideas into digital realities one code at a time.</p>
       <div>
-        <ul className="flex flex-wrap w-full lg:hidden">
+        <ul className="flex flex-wrap justify-between w-full lg:hidden">
           { renderMobileViewTools() }
         </ul>
         <ul className="hidden lg:flex lg:items-center lg:justify-center">

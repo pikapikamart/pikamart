@@ -64,7 +64,7 @@ export const projectsData: Project[] = [
   {
     logo: "coffeeroasters.svg",
     title: "Coffeeroasters Subscription Site",
-    description: "A website challenge from FrontendMentor. The main challenge of the website was  ensuring proper accessibility due to the varying contents for each route. The website  was properly built to pass accessibility tests, and took necessary measures to ensure  that the contents are properly accessible.",
+    description: "A website challenge on FrontendMentor that allows users to order and customize coffee without any real payment functionality. Animations are added to make the application more exciting and appropriate tags and methods are used for a better accessibility. Overall, the web application was executed well.",
     stacks: [
       "Typescript", "Next.js", "SCSS", "Framer Motion", "Styled Components"
     ],
@@ -78,7 +78,7 @@ export const projectsData: Project[] = [
   {
     logo: "tictactoe.svg",
     title: "Frontendmentor Tic Tac Toe",
-    description: "A website challenge from FrontendMentor. The main challenge of the website was  ensuring proper accessibility due to the varying contents for each route. The website  was properly built to pass accessibility tests, and took necessary measures to ensure  that the contents are properly accessible.",
+    description: "This challenge is adopted from the classic tic tac toe game that we all played before. This particular challenge gives you a design plus some mode for you to play. It includes playing a cpu or you can play it with locally with 2 players. On this one, I added realtime functionality so you can play with others done with sockets.",
     stacks: [
       "Typescript", "Next.js", "Framer Motion", "Styled Components", "Socket.io", "React Tracked"
     ],
@@ -92,11 +92,12 @@ export const projectsData: Project[] = [
   {
     logo: "bean_cafe.svg",
     title: "Bean Cafe",
-    description: "A website challenge from FrontendMentor. The main challenge of the website was  ensuring proper accessibility due to the varying contents for each route. The website  was properly built to pass accessibility tests, and took necessary measures to ensure  that the contents are properly accessible.",
+    description: "Bean Cafe is the website for ordering products from 21st Bean Cafe itself. The ordering itself is only limited to sandbox as the payment provider's information was not updated. This was a freelance project, developed all the functionality from buyers to the seller and admin side. Design is from client.",
     stacks: [
       "Typescript", "Next.js", "Redux", "Framer Motion", "tRPC", "MongoDB", "NextAuth", "Styled Components", "React Tracked"
     ],
     color: "white",
+    site: "https://21stbean.vercel.app/",
     type: "column",
     background_color: "#03070E",
     background_image: "bean_cafe_bg.png"

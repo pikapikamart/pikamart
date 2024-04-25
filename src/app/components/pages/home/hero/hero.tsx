@@ -14,6 +14,7 @@ const Hero = () => {
       </div>
       <div>
         <img 
+          className="w-full"
           src="/bg/hero.png" 
           alt=""
           aria-hidden="true" />

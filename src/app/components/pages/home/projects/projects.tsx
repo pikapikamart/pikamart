@@ -31,7 +31,7 @@ const Projects = () =>{
           <ul className={`flex flex-wrap w-full gap-2 ${ (!!project.site || !!project.github) && "mb-6" } ${ isProjectRow(project) && isLastIndex(index) && "lg:justify-end" }`}>
             { project.stacks.map(stack => (
               <li
-                className={`text-[clamp(12px,1vw,14px)] py-[6px] px-2 rounded border-[.5px] ${ project.color==="white"? "text-white border-white" : "text-dark-one border-dark-one" }`}
+                className={`text-[clamp(12px,2vw,14px)] py-[6px] px-2 rounded border-[.5px] ${ project.color==="white"? "text-white border-white" : "text-dark-one border-dark-one" }`}
                 key={`${ project.title }-${ stack }`}>
                 { stack }
               </li>
@@ -95,10 +95,10 @@ const Projects = () =>{
     <div className="px-[clamp(16px,4vw,64px)] max-w-default !mb-[clamp(80px,15vw,128px)]">
       <div className="lg:flex lg:justify-between lg:items-center mb-[clamp(48px,7vw,96px)]">
         <h2 
-          className="heading-default mb-[clamp(16px,1vw,24px)] text-dark-one leading-[1] lg:mb-0"
+          className="heading-default mb-[clamp(16px,1vw,24px)] text-dark-one leading-[1] lg:mb-0 lg:max-w-[640px]"
           id="about">Some of my past projects
         </h2>
-        <p className="leading-main text-dark-one text-[clamp(16px,2vw,20px)] lg:text-right lg:max-w-[640px]">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi, iusto.</p>
+        <p className="leading-main text-dark-one text-[clamp(16px,2vw,20px)] lg:text-right lg:max-w-[640px]">Here's a peek of some cool stuffs that I made before. These projects reflect my journey in of being a web developer.</p>
       </div>
       <ul className="lg:flex lg:w-full lg:flex-wrap lg:justify-between">
         { renderProjects() }

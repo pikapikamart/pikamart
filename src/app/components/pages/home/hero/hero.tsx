@@ -4,7 +4,7 @@ const Hero = () => {
 
   return (
     <div className="pt-[clamp(96px,13vw,128px)] min-h-[calc(100vh-clamp(64px,9vw,80px))]">
-      <div className="px-[clamp(16px,5vw,64px)]">
+      <div className="px-[clamp(16px,4vw,64px)]">
         <h1 className="font-bold mb-6 font-merriweather leading-[1] text-dark-one text-[clamp(56px,9vw,86px)] text-center flex flex-col items-center w-full tracking-[-4px] md:block">
           <span className="text-[32px] md:text-[clamp(56px,9vw,86px)] md:mr-4">Hi.</span>
           I'm Raymart

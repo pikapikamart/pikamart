@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64" height="64" viewBox="0 0 64 64">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_10" data-name="Rectangle 10" width="64" height="64" rx="4" transform="translate(618 1318)" fill="#fff"/>
+    </clipPath>
+  </defs>
+  <g id="css_scss" transform="translate(-618 -1318)" clip-path="url(#clip-path)">
+    <g id="file-type-css" transform="translate(621.429 1318)">
+      <path id="Path_2" data-name="Path 2" d="M8.79,59.6,3.656,2h56.43L54.945,59.593,31.837,66Z" transform="translate(-3.656 -2)" fill="#1572b6"/>
+      <path id="Path_3" data-name="Path 3" d="M16,58.454l18.674-5.177L39.067,4.061H16Z" transform="translate(12.215 0.65)" fill="#33a9dc"/>
+      <path id="Path_4" data-name="Path 4" d="M16,21.234h9.349L25.993,14H16V6.935H33.714L33.545,8.83,31.81,28.3H16Z" transform="translate(12.215 4.345)" fill="#fff"/>
+      <path id="Path_5" data-name="Path 5" d="M24.735,25.578l-.032.009-7.867-2.126-.5-5.634H9.24l.99,11.093L24.7,32.938l.034-.009Z" transform="translate(3.523 18.349)" fill="#ebebeb"/>
+      <path id="Path_6" data-name="Path 6" d="M24.737,16.151l-.85,9.461-7.879,2.126v7.351L30.49,31.074l.107-1.193,1.227-13.73Z" transform="translate(12.225 16.194)" fill="#fff"/>
+      <g id="Group_2" data-name="Group 2" transform="translate(10.542 11.28)">
+        <path id="Path_7" data-name="Path 7" d="M25.966,6.935V14H8.9l-.142-1.589L8.437,8.83,8.268,6.935Z" transform="translate(-8.268 -6.935)" fill="#ebebeb"/>
+        <path id="Path_8" data-name="Path 8" d="M20.725,13.191v7.065H12.956l-.142-1.589-.32-3.582-.169-1.895Z" transform="translate(-3.052 1.108)" fill="#ebebeb"/>
+      </g>
+    </g>
+  </g>
+</svg>

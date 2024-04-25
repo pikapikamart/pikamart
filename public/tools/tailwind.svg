@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64" height="64" viewBox="0 0 64 64">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_4" data-name="Rectangle 4" width="64" height="64" rx="4" transform="translate(701 1156)" fill="#fff"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="-0.028" y1="0.32" x2="1" y2="0.676" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#2298bd"/>
+      <stop offset="1" stop-color="#0ed7b5"/>
+    </linearGradient>
+  </defs>
+  <g id="tailwind" transform="translate(-701 -1156)" clip-path="url(#clip-path)">
+    <path id="tailwind-css" d="M32,0Q19.2,0,16,12.8,20.8,6.4,27.2,8c2.434.609,4.174,2.375,6.1,4.33,3.137,3.185,6.769,6.87,14.7,6.87q12.8,0,16-12.8-4.8,6.4-11.2,4.8c-2.434-.609-4.174-2.375-6.1-4.33C43.562,3.686,39.931,0,32,0ZM16,19.2Q3.2,19.2,0,32q4.8-6.4,11.2-4.8c2.434.609,4.174,2.375,6.1,4.33,3.137,3.185,6.769,6.87,14.7,6.87q12.8,0,16-12.8Q43.2,32,36.8,30.4c-2.434-.609-4.174-2.375-6.1-4.33C27.562,22.886,23.931,19.2,16,19.2Z" transform="translate(701 1169)" fill="url(#linear-gradient)"/>
+  </g>
+</svg>

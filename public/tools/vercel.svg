@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64" height="64" viewBox="0 0 64 64">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_3" data-name="Rectangle 3" width="64" height="64" rx="4" transform="translate(758 1063)" fill="#fff"/>
+    </clipPath>
+  </defs>
+  <g id="vercel" transform="translate(-758 -1063)" clip-path="url(#clip-path)">
+    <path id="vercel-2" data-name="vercel" d="M64,57.608H0L32,1.475Z" transform="translate(758 1064.954)"/>
+  </g>
+</svg>

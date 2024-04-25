@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64" height="64" viewBox="0 0 64 64">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_4" data-name="Rectangle 4" width="64" height="64" rx="4" transform="translate(1136 1003)" fill="#fff"/>
+    </clipPath>
+  </defs>
+  <g id="trpc" transform="translate(-1136 -1003)" clip-path="url(#clip-path)">
+    <g id="trpc-2" data-name="trpc" transform="translate(1136 1003)">
+      <rect id="Rectangle_34" data-name="Rectangle 34" width="64" height="64" rx="32" fill="#398ccb"/>
+      <path id="Path_53" data-name="Path 53" d="M100.228,75l8.885,5.126v2.818l10.754,6.21V99.778l2.885,1.665V111.7l-8.879,5.126-3.942-2.28-9.584,5.534-9.527-5.5-3.887,2.248-8.879-5.135V101.443l2.772-1.6V89.155L91.349,83.08h.006V80.126Zm8.885,10.61v4.768L100.234,95.5l-8.879-5.126V85.742h-.006l-8.215,4.745V98.51l3.8-2.193,8.879,5.126v10.249l-2.686,1.553,7.221,4.17,7.278-4.2-2.631-1.522V101.443l8.879-5.126,3.687,2.128V90.488ZM107.3,110.371v-6.257l5.417,3.127V113.5Zm13.142-6.265-5.417,3.127V113.5l5.417-3.136Zm-40.082,6.257v-6.257l5.417,3.127v6.257ZM93.5,104.106l-5.417,3.127v6.257l5.417-3.127Zm14.951-1.99,5.417-3.127,5.417,3.127-5.417,3.13ZM86.933,98.98l-5.417,3.136,5.417,3.121,5.417-3.121Zm6.73-9.935V82.789l5.411,3.13v6.254ZM106.8,82.789l-5.411,3.13v6.251l5.411-3.124Zm-11.983-2,5.411-3.127,5.417,3.127-5.417,3.127Z" transform="translate(-68.297 -65.625)" fill="#fff" fill-rule="evenodd"/>
+    </g>
+  </g>
+</svg>

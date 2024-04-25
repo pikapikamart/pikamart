@@ -22,6 +22,32 @@ const config: Config = {
       colors: {
         "dark-one": "#101217",
         "yellow-one": "#FFCB00"
+      },
+      keyframes: {
+        scrollIn: {
+          "0%": {
+            opacity: "0",
+            transform: "translateY(-100%)"
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateY(0)"
+          }
+        },
+        scrollOut: {
+          "0%": {
+            opacity: "1",
+            transform: "translateY(0%)"
+          },
+          "100%": {
+            opacity: "0",
+            transform: "translateY(-100%)"
+          }
+        }
+      },
+      animation: {
+        scrollIn: "scrollIn 1s ease forwards",
+        scrollOut: "scrollOut .45s ease forwards"
       }
     },
   },

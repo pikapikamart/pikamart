@@ -96,7 +96,7 @@ const Projects = () =>{
       <div className="lg:flex lg:justify-between lg:items-center mb-[clamp(48px,7vw,96px)]">
         <h2 
           className="heading-default mb-[clamp(16px,1vw,24px)] text-dark-one leading-[1] lg:mb-0 lg:max-w-[640px]"
-          id="about">Some of my past projects
+          id="projects">Some of my past projects
         </h2>
         <p className="leading-main text-dark-one text-[clamp(16px,2vw,20px)] lg:text-right lg:max-w-[640px]">Here's a peek of some cool stuffs that I made before. These projects reflect my journey in of being a web developer.</p>
       </div>

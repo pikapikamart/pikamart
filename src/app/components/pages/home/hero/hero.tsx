@@ -46,10 +46,10 @@ const Hero = () => {
                     delay: .5
                   }
                 }}
-                className={`block non-floating uppercase text-base text-white py-4 px-20 rounded-full bg-dark-one font-medium ${ isButtonAnimated && "floating" }`}>
-                Let's Talk
+                className={`whitespace-nowrap block non-floating uppercase text-base text-white py-4 px-20 rounded-full bg-dark-one font-medium ${ isButtonAnimated && "floating" }`}>
+                <span className="transition-all">Let's Talk</span>
                 <img 
-                  className={`transition-all opacity-0 w-0 translate-x-3 -translate-y-3 ${ isButtonAnimated && "!opacity-100 !w-auto" }`}
+                  className={`transition-all absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 w-0 ${ isButtonAnimated && "!opacity-100 w-[clamp(28px,4vw,36px)]" }`}
                   src="/icons/message.svg" 
                   alt=""
                   aria-hidden="true" />

@@ -30,24 +30,28 @@
 
   .non-floating {
     bottom: calc(100vh - 90px);
-    left: calc(50% - 110px);
+    left: 50%;
     position: absolute;
     transition: all .5s ease-in-out;
-    transform: translateZ(0);
+    transform: translateZ(0) translateX(-50%);
   }
 
   .floating {
     background-color: #101217;
     border-radius: 50%;
     bottom: 32px;
-    font-size: 0;
-    height: 64px;
-    left: calc(100% - 96px);
+    height: clamp(48px,5vw,64px);
+    left: calc(100% - clamp(56px,8vw,96px));
     padding: 0;
     position: fixed;
     transform: translateZ(0);
     transition: all .5s ease-in-out;
-    width: 64px;
+    width: clamp(48px,5vw,64px);
     z-index: 10;
+  }
+
+  .floating > span {
+    opacity: 0;
+    font-size: 0;
   }
 }

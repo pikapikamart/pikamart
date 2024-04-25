@@ -1,12 +1,12 @@
 "use client"
-import { useStickHeader } from "@/app/components/lib/hooks/useStickyHeader"
+import { useStickyHeader } from "@/app/components/lib/hooks/useStickyHeader"
 import Link from "next/link"
 
 
 const Main = () =>{
   const { 
     hideHeaderSticky,
-    showHeaderSticky } = useStickHeader()
+    showHeaderSticky } = useStickyHeader()
 
   return (
     <header className={`flex items-center justify-between px-4 lg:px-16 h-[clamp(64px,9vw,80px)] max-w-default bg-white ${hideHeaderSticky? "animate-scrollOut scroll-in" : showHeaderSticky? "animate-scrollIn scroll-in" : ""}`}>

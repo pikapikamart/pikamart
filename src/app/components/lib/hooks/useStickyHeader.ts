@@ -3,7 +3,7 @@ import {
   useState } from "react";
 
 
-export const useStickHeader = () => {
+export const useStickyHeader = () => {
   const [ showHeaderSticky, setShowHeaderSticky ] = useState(false);
   const [ hideHeaderSticky, setHideHeaderSticky ] = useState(false);
   const [ windowHeight, setWindowHeight ] = useState(0);
@@ -20,11 +20,11 @@ export const useStickHeader = () => {
   }, [ hideHeaderSticky ]);
 
   useEffect(() =>{
-    if ( !hideHeaderSticky && windowHeight > 650 ) {
+    if ( !hideHeaderSticky && windowHeight > 380 ) {
       setShowHeaderSticky(true);
     }
 
-    else if ( showHeaderSticky && windowHeight <= 650 ) {
+    else if ( showHeaderSticky && windowHeight <= 380 ) {
       setHideHeaderSticky(true);
     }
   }, [ windowHeight ]);

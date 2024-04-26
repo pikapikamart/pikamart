@@ -20,13 +20,14 @@ export const useStickyHeader = () => {
   }, [ hideHeaderSticky ]);
 
   useEffect(() =>{
+
     if ( !hideHeaderSticky && windowHeight > 380 ) {
       setShowHeaderSticky(true);
-    }
-
-    else if ( showHeaderSticky && windowHeight <= 380 ) {
+    } else if ( showHeaderSticky && windowHeight <= 380 ) {
       setHideHeaderSticky(true);
     }
+
+
   }, [ windowHeight ]);
 
   useEffect(() =>{

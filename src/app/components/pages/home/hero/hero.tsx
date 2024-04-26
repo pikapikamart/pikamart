@@ -4,7 +4,9 @@ import { useHero } from "./hook"
 
 
 const Hero = () => {
-  const { isButtonAnimated } = useHero()
+  const { 
+    isButtonAnimated,
+    isMaximumHeightReached } = useHero()
 
   return (
     <div className="pt-[clamp(96px,13vw,128px)] min-h-[calc(100vh-clamp(64px,9vw,80px))]">
@@ -44,7 +46,7 @@ const Hero = () => {
                     delay: .5
                   }
                 }}
-                className={`whitespace-nowrap !z-[999999] block non-floating uppercase text-base text-white py-4 px-20 rounded-full bg-dark-one font-medium ${ isButtonAnimated && "floating" }`}>
+                className={`whitespace-nowrap !z-[999999] block non-floating uppercase text-base text-white py-4 px-20 rounded-full bg-dark-one font-medium ${ isButtonAnimated && "floating" } ${ isMaximumHeightReached && "hide-floating" }`}>
                 <span className="transition-all">Let's Talk</span>
                 <img 
                   className={`transition-all absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 w-0 ${ isButtonAnimated && "!opacity-100 w-[clamp(28px,4vw,36px)]" }`}

@@ -11,7 +11,7 @@ const Root = () =>{
   return (
     <>
       <MainHeader />
-      <main>
+      <main className="overflow-hidden">
         <HomeHero />
         <HomeAbout />
         <HomeTools />

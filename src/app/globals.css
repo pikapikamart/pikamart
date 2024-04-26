@@ -74,4 +74,8 @@
     opacity: 0;
     font-size: 0;
   }
+
+  body.no-scroll {
+    overflow: hidden;
+  }
 }

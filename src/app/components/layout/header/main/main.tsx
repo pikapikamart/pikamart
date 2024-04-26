@@ -1,15 +1,22 @@
 "use client"
 import { useStickyHeader } from "@/app/components/lib/hooks/useStickyHeader"
 import Link from "next/link"
-import { motion } from "framer-motion"
+import { 
+  motion,
+  AnimatePresence } from "framer-motion"
 import { mainData } from "./data"
+import { useExpansion } from "@/app/lib/hooks/useExpansion"
+import { ContactModal } from "@/app/components/modal/contact"
 
 
 const Main = () =>{
   const { 
     hideHeaderSticky,
     showHeaderSticky } = useStickyHeader()
-
+  const { 
+    isExpanded,
+    handleExpansion } = useExpansion()
+    
   const renderNavlinks = () =>{
     const mappedLinks = mainData.map(data => (
       <motion.li
@@ -38,15 +45,19 @@ const Main = () =>{
             { renderNavlinks() }
             <li className="hidden text-lg md:block">
               <motion.button 
+                onClick={ handleExpansion }
                 whileHover={{
                   y: "-5%"
                 }}
-                className=" py-3 px-4 rounded-full bg-yellow-one text-dark-one">
-                  Get in Touch
+                className=" py-3 px-4 rounded-full bg-yellow-one text-dark-one"
+                aria-expanded={ isExpanded }>Get in Touch
               </motion.button>
             </li>
           </ul>
         </nav>
+        <AnimatePresence>
+          { isExpanded && <ContactModal exit={handleExpansion} /> }
+        </AnimatePresence>
       </div>
     </header>
   )

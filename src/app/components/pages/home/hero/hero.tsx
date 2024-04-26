@@ -1,12 +1,19 @@
 "use client"
-import { motion } from "framer-motion"
+import { 
+  motion, 
+  AnimatePresence } from "framer-motion"
 import { useHero } from "./hook"
+import { useExpansion } from "@/app/lib/hooks/useExpansion"
+import { ContactModal } from "@/app/components/modal/contact"
 
 
 const Hero = () => {
   const { 
     isButtonAnimated,
     isMaximumHeightReached } = useHero()
+  const { 
+    isExpanded,
+    handleExpansion } = useExpansion()
 
   return (
     <div className="pt-[clamp(96px,13vw,128px)] min-h-[calc(100vh-clamp(64px,9vw,80px))]">
@@ -38,6 +45,8 @@ const Hero = () => {
           <div className="relative pt-20">
             <div className="absolute top-0 left-0 w-full h-screen">
               <motion.button 
+                onClick={ handleExpansion }
+                aria-expanded={ isExpanded }
                 initial={{ opacity: 0 }}
                 animate={{
                   opacity: 1,
@@ -64,6 +73,9 @@ const Hero = () => {
           alt=""
           aria-hidden="true" />
       </div>
+      <AnimatePresence>
+        { isExpanded && <ContactModal exit={handleExpansion} /> }
+      </AnimatePresence>
     </div>
   )
 }

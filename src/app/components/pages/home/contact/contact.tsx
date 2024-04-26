@@ -2,11 +2,18 @@
 import { 
   customSwipeUpVariant, 
   fadeVariant } from "@/app/motion"
-import { motion, } from "framer-motion"
+import { 
+  motion,
+  AnimatePresence } from "framer-motion"
 import { contactData } from "./data"
+import { useExpansion } from "@/app/lib/hooks/useExpansion"
+import { ContactModal } from "@/app/components/modal/contact"
 
 
 const Contact = () =>{
+  const { 
+    isExpanded,
+    handleExpansion } = useExpansion()
 
   const renderSocialLinks = () =>{
     const mappedLinks = contactData.map((data, index) => (
@@ -54,6 +61,8 @@ const Contact = () =>{
           Feel free to reach out! Drop me a message and let's start a conversation.
         </motion.p>
         <motion.button 
+          onClick={ handleExpansion }
+          aria-expanded={ isExpanded }
           initial={{ opacity: 0 }}
           whileInView={{
             opacity: 1,
@@ -73,6 +82,9 @@ const Contact = () =>{
       <ul className="flex justify-center w-full gap-x-4 lg:gap-x-8">
         { renderSocialLinks() }
       </ul>
+      <AnimatePresence>
+        { isExpanded && <ContactModal exit={handleExpansion} /> }
+      </AnimatePresence>
     </div>
   )
 }

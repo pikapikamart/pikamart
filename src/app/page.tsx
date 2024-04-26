@@ -18,6 +18,7 @@ const Root = () =>{
         <HomeProjects />
         <HomeContact />
       </main>
+      
     </>
   )
 }

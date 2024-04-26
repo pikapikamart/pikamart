@@ -121,11 +121,7 @@ export const toolsData: ToolsData = [
     ]
   },
   {
-    group: [
-      {
-        name: "Flutter",
-        id: "flutter"
-      }
-    ]
+    name: "Flutter",
+    id: "flutter"
   }
 ]

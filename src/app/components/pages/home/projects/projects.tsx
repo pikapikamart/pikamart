@@ -1,4 +1,10 @@
-import { isProjectColumn, isProjectRow, projectsData } from "./data"
+"use client"
+import { customSwipeUpVariant } from "@/app/motion"
+import { 
+  isProjectColumn, 
+  isProjectRow, 
+  projectsData } from "./data"
+import { motion } from "framer-motion"
 
 
 const Projects = () =>{
@@ -17,7 +23,11 @@ const Projects = () =>{
     const isLastIndex = (index: number) => index===projectsData.length-1
 
     const mappedProjects = projectsData.map((project, index) => (
-      <li
+      <motion.li
+        initial="initial"
+        whileInView="animate"
+        viewport={{once: true, amount: .25}}
+        variants={customSwipeUpVariant("5%", .5, .05*index)} 
         className={`rounded-lg py-[clamp(24px,3.5vw,40px)] px-[clamp(16px,3vw,24px)] mb-4 lg:pr-6} ${ buildProjectClass(index) } ${ index!==0 && !isLastIndex(index) && "lg:min-h-[672px]" } relative`}
         style={{  backgroundColor: project.background_color }} 
         key={`project-${ project.title }`}>
@@ -39,7 +49,10 @@ const Projects = () =>{
           </ul>
           <div className={`flex ${ isProjectRow(project) && isLastIndex(index) && "lg:justify-end" }`}>
             { !!project.site && (
-              <a
+              <motion.a
+                whileHover={{
+                  rotate: 15
+                }}
                 className="mr-4" 
                 href={project.site}
                 target="_blank">
@@ -48,10 +61,13 @@ const Projects = () =>{
                   src={project.color==="white"? "/icons/web.svg" : "/icons/web_dark.svg" }
                   alt=""
                   aria-hidden="true" />
-              </a>
+              </motion.a>
             ) }
             { !!project.github && (
-              <a
+              <motion.a
+                whileHover={{
+                  rotate: 15
+                }}
                 className="mr-4" 
                 href={project.github}
                 target="_blank">
@@ -60,7 +76,7 @@ const Projects = () =>{
                   src={project.color==="white"? "/icons/github.svg" : "/icons/github_dark.svg" }
                   alt=""
                   aria-hidden="true" />
-              </a>
+              </motion.a>
             ) }
           </div>
         </div>
@@ -85,7 +101,7 @@ const Projects = () =>{
               aria-hidden />
           </div>
         ) }
-      </li>
+      </motion.li>
     ))
 
     return mappedProjects
@@ -94,11 +110,22 @@ const Projects = () =>{
   return (
     <div className="px-[clamp(16px,4vw,64px)] max-w-default !mb-[clamp(80px,15vw,128px)]">
       <div className="lg:flex lg:justify-between lg:items-center mb-[clamp(48px,7vw,96px)]">
-        <h2 
+        <motion.h2 
+          initial="initial"
+          whileInView="animate"
+          viewport={{once: true, amount: 1}}
+          variants={customSwipeUpVariant("10%", .35)} 
           className="heading-default mb-[clamp(16px,1vw,24px)] text-dark-one leading-[1] lg:mb-0 lg:max-w-[640px]"
           id="projects">Some of my past projects
-        </h2>
-        <p className="leading-main text-dark-one text-[clamp(16px,2vw,20px)] lg:text-right lg:max-w-[640px]">Here's a peek of some cool stuffs that I made before. These projects reflect my journey in of being a web developer.</p>
+        </motion.h2>
+        <motion.p 
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true, amount: .25 }} 
+          variants={customSwipeUpVariant("10%", .45)}
+          className="leading-main text-dark-one text-[clamp(16px,2vw,20px)] lg:text-right lg:max-w-[640px]">
+          Here's a peek of some cool stuffs that I made before. These projects reflect my journey in of being a web developer.
+        </motion.p>
       </div>
       <ul className="lg:flex lg:w-full lg:flex-wrap lg:justify-between">
         { renderProjects() }

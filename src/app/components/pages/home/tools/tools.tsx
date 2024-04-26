@@ -26,12 +26,12 @@ const Tools = () =>{
 
     return tools.map((tool, index) => (
       <motion.li
+        key={ tool.id }
         initial="initial"
         variants={ fadeVariant() }
         whileInView="animate"
         viewport={{once: true}}
         className="w-full max-w-[clamp(80px,15vw,128px)] max-h-[64px,6vw,104px] flex flex-col items-center mb-[clamp(1rem,4vw,2rem)]" 
-        key={ tool.id }
         custom={ index }>
         <img 
           className="max-w-[clamp(40px,8vw,64px)] max-h-[clamp(40px,8vw,64px)] mb-4"
@@ -84,7 +84,7 @@ const Tools = () =>{
           }}
           viewport={{
             once: true,
-            amount: 1
+            amount: .75
           }}
           className="w-32 h-[104px] flex flex-col items-center" 
           key={ tool.id }>
@@ -115,7 +115,7 @@ const Tools = () =>{
                 }}
                 viewport={{
                   once: true,
-                  amount: 1
+                  amount: .75
                 }}
                 className="w-32 h-[104px] flex flex-col items-center" 
                 key={ innerTool.id }>

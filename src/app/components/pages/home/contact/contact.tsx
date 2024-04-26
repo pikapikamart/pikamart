@@ -42,7 +42,7 @@ const Contact = () =>{
   }
 
   return (
-    <div className="max-w-default min-h-[calc(100vh-clamp(64px,9vw,80px))] px-[clamp(16px,4vw,64px)]">
+    <div className="max-w-default min-h-[calc(100vh-148px)] px-[clamp(16px,4vw,64px)] lg:min-h-[calc(100vh-clamp(64px,9vw,160px))]">
       <div className=" mb-[clamp(64px,10vw,96px)]">
         <motion.h2 
           initial="initial"

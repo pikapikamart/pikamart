@@ -4,9 +4,7 @@ import { useHero } from "./hook"
 
 
 const Hero = () => {
-  const { 
-    isButtonAnimated,
-    isButtonHidden } = useHero()
+  const { isButtonAnimated } = useHero()
 
   return (
     <div className="pt-[clamp(96px,13vw,128px)] min-h-[calc(100vh-clamp(64px,9vw,80px))]">

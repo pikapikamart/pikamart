@@ -20,7 +20,9 @@ type RootLayoutProps = Readonly<{
 const RootLayout = ({ children }: RootLayoutProps) =>{
 
   return (
-    <html lang="en">
+    <html
+      className="scroll-smooth" 
+      lang="en">
       <body className={`${ quicksand_sans } ${ poppins_sans } ${ merriweather_sans_serif } font-quicksand`}>
         {children}
       </body>

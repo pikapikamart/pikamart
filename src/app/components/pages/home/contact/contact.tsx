@@ -18,7 +18,7 @@ const Contact = () =>{
         variants={ fadeVariant() }
         custom={ index+7 }
         whileHover={{
-          y: "-5%"
+          y: "-5%",
         }}>
         <a href={ data.link } target="_blank">
           <span className="sr-only">{ data.label }</span>
@@ -63,6 +63,9 @@ const Contact = () =>{
             }
           }}
           viewport={{ once: true, amount: 1 }}
+          whileHover={{
+            padding: "16px 64px"
+          }}
           className="block uppercase text-dark-one py-4 px-20 rounded-full bg-yellow-one font-medium max-w-max mx-auto">
           Let's Talk
         </motion.button>

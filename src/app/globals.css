@@ -36,6 +36,14 @@
     transform: translateZ(0) translateX(-50%);
   }
 
+  .non-floating:hover {
+    transform: translateZ(0) translateX(-50%) translateY(-5%);
+  }
+
+  .non-floating img {
+    transition-duration: .75s;
+  }
+
   .floating {
     background-color: #101217;
     border-radius: 50%;
@@ -48,6 +56,14 @@
     transition: all .5s ease-in-out;
     width: clamp(48px,5vw,64px);
     z-index: 10;
+  }
+
+  .floating:hover {
+    transform: translateZ(0) translateY(-5%);
+  }
+
+  .floating:hover img {
+    transform: translate(-50%, -50%) rotate(15deg);
   }
 
   .floating > span {

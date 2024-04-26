@@ -27,7 +27,7 @@ const Projects = () =>{
         initial="initial"
         whileInView="animate"
         viewport={{once: true, amount: .25}}
-        variants={customSwipeUpVariant("5%", .5, .05*index)} 
+        variants={customSwipeUpVariant("2%", .5)} 
         className={`rounded-lg py-[clamp(24px,3.5vw,40px)] px-[clamp(16px,3vw,24px)] mb-4 lg:pr-6} ${ buildProjectClass(index) } ${ index!==0 && !isLastIndex(index) && "lg:min-h-[672px]" } relative`}
         style={{  backgroundColor: project.background_color }} 
         key={`project-${ project.title }`}>

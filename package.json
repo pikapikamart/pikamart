@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.4",
+    "@vercel/analytics": "^1.2.2",
     "focus-trap-react": "^10.2.3",
     "framer-motion": "^11.1.7",
     "next": "14.2.2",

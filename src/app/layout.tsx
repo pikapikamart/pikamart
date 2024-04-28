@@ -4,6 +4,7 @@ import {
   merriweather_sans_serif, 
   poppins_sans, 
   quicksand_sans } from "./utils/fonts";
+import { Analytics } from "@vercel/analytics/react"
 
 
 export const metadata: Metadata = {
@@ -24,6 +25,7 @@ const RootLayout = ({ children }: RootLayoutProps) =>{
       lang="en">
       <body className={`${ quicksand_sans } ${ poppins_sans } ${ merriweather_sans_serif } font-quicksand`}>
         {children}
+        <Analytics />
       </body>
     </html>
   );

@@ -16,6 +16,7 @@ export type RowProject = {
   type: "row"
   background_images: string[]
   reversed?: boolean
+  direction?: "right" | "left"
 }
 
 export type ColumnProject = {
@@ -25,6 +26,10 @@ export type ColumnProject = {
 
 export const isProjectRow = (project: Project): project is Project & RowProject =>{
   return project.type==="row"
+}
+
+export const isProjectRowRight = (project: Project): project is Project & RowProject =>{
+  return (project as RowProject).direction==="right"
 }
 
 export const isProjectColumn = (project: Project): project is Project & ColumnProject =>{
@@ -115,6 +120,21 @@ export const projectsData: Project[] = [
     type: "row",
     reversed: true,
     background_color: "#E4E4E4",
-    background_images: ["tbgp_1.png", "tbgp_2.png"]
+    background_images: ["tbgp_1.png", "tbgp_2.png"],
+    direction: "right"
+  },
+  {
+    logo: "devlinks.svg",
+    title: "Devlinks - Links Sharing App",
+    description: "This project is all about the addition of the user's link that will be reflected on their own personal profile preview that is shareable for others to see. User can update their profile information as well so that the preview will always be updated.",
+    stacks: [
+      "Typescript", "Next.js", "tRPC", "Framer Motion", "TailwindCss", "MySql", "Drizzle", "Zustand", "NextAuth"
+    ],
+    site: "https://link-sharing-devs.vercel.app",
+    github: "https://github.com/pikapikamart/link-sharing",
+    color: "white",
+    type: "row",
+    background_color: "#7C62E4",
+    background_images: ["devlinks_1.png", "devlinks_2.png"]
   },
 ]

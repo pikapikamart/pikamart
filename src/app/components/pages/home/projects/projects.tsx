@@ -1,8 +1,10 @@
 "use client"
 import { customSwipeUpVariant } from "@/app/motion"
 import { 
+  Project,
   isProjectColumn, 
   isProjectRow, 
+  isProjectRowRight, 
   projectsData } from "./data"
 import { motion } from "framer-motion"
 
@@ -11,8 +13,8 @@ const Projects = () =>{
 
   const renderProjects = () =>{
 
-    const buildProjectClass = (index: number) =>{
-      if ( index===0 || isLastIndex(index) ) return "basis-full"
+    const buildProjectClass = (index: number, project?: Project) =>{
+      if ( index===0 || isLastIndex(index) || project?.type==="row") return "basis-full"
 
       if ( index%2 && index < 3 ) return "basis-[52.5%]"
       else if ( index%2 && index > 2 ) return "basis-[46.5%]"
@@ -28,17 +30,17 @@ const Projects = () =>{
         whileInView="animate"
         viewport={{once: true, amount: .25}}
         variants={customSwipeUpVariant("2%", .5)} 
-        className={`rounded-lg py-[clamp(24px,3.5vw,40px)] px-[clamp(16px,3vw,24px)] mb-4 lg:pr-6} ${ buildProjectClass(index) } ${ index!==0 && !isLastIndex(index) && "lg:min-h-[672px]" } relative`}
+        className={`rounded-lg py-[clamp(24px,3.5vw,40px)] px-[clamp(16px,3vw,24px)] mb-4 lg:pr-6} ${ buildProjectClass(index, project) } ${ isProjectColumn(project) && "lg:min-h-[672px]" } relative`}
         style={{  backgroundColor: project.background_color }} 
         key={`project-${ project.title }`}>
-        <div className={`${ isProjectRow(project) && "lg:max-w-[clamp(520px,41vw,656px)]" } ${ isProjectRow(project) && isLastIndex(index) && "ms-auto" } relative z-10`}>
+        <div className={`${ isProjectRow(project) && "lg:max-w-[clamp(520px,41vw,656px)]" } ${ isProjectRow(project) && isProjectRowRight(project) && "ms-auto" } relative z-10`}>
           <img 
-            className={`max-h-[clamp(16px,2vw,26px)] mb-4 ${ isLastIndex(index) && "lg:ms-auto" }`}
+            className={`max-h-[clamp(16px,2vw,26px)] mb-4 ${ isProjectRowRight(project) && "lg:ms-auto" }`}
             src={`/projects/${ project.logo }`} 
             alt={`${ project.title }`} />
-          <h3 className={`font-poppins font-bold text-[clamp(32px,6vw,56px)] leading-[1.25] mb-4 ${ project.color==="white"? "text-white" : "text-dark-one" } ${ isProjectRow(project) && isLastIndex(index) && "lg:text-right" }`}>{ project.title }</h3>
-          <p className={`text-[clamp(14px,1.5vw,16px)] leading-main mb-6 ${ project.color==="white"? "text-white" : "text-dark-one" } ${ isProjectRow(project) && isLastIndex(index) && "lg:text-right" }` }>{ project.description }</p>
-          <ul className={`flex flex-wrap w-full gap-2 ${ (!!project.site || !!project.github) && "mb-6" } ${ isProjectRow(project) && isLastIndex(index) && "lg:justify-end" }`}>
+          <h3 className={`font-poppins font-bold text-[clamp(32px,6vw,56px)] leading-[1.25] mb-4 ${ project.color==="white"? "text-white" : "text-dark-one" } ${ isProjectRow(project) && isProjectRowRight(project) && "lg:text-right" }`}>{ project.title }</h3>
+          <p className={`text-[clamp(14px,1.5vw,16px)] leading-main mb-6 ${ project.color==="white"? "text-white" : "text-dark-one" } ${ isProjectRow(project) && isProjectRowRight(project) && "lg:text-right" }` }>{ project.description }</p>
+          <ul className={`flex flex-wrap w-full gap-2 ${ (!!project.site || !!project.github) && "mb-6" } ${ isProjectRow(project) && isProjectRowRight(project) && "lg:justify-end" }`}>
             { project.stacks.map(stack => (
               <li
                 className={`text-[clamp(12px,2vw,14px)] py-[6px] px-2 rounded border-[.5px] ${ project.color==="white"? "text-white border-white" : "text-dark-one border-dark-one" }`}
@@ -47,7 +49,7 @@ const Projects = () =>{
               </li>
             )) }
           </ul>
-          <div className={`flex ${ isProjectRow(project) && isLastIndex(index) && "lg:justify-end" }`}>
+          <div className={`flex ${ isProjectRow(project) && isProjectRowRight(project) && "lg:justify-end" }`}>
             { !!project.site && (
               <motion.a
                 whileHover={{
@@ -90,12 +92,12 @@ const Projects = () =>{
         { isProjectRow(project) && (
           <div className="hidden lg:block">
             <img 
-              className={`absolute top-6 ${ index===0 && "right-[clamp(56px,6vw,80px)]" } ${ isLastIndex(index) && "left-[clamp(56px,6vw,80px)]" } `}
+              className={`absolute top-6 ${ !isProjectRowRight(project) && "right-[clamp(56px,6vw,80px)]" } ${ isProjectRowRight(project) && "left-[clamp(56px,6vw,80px)]" } `}
               src={`/projects/${ project.background_images[0] }`} 
               alt=""
               aria-hidden />
             <img 
-              className={`absolute bottom-6 ${ index===0 && "right-6" } ${ isLastIndex(index) && "left-6" }`}
+              className={`absolute bottom-6 ${ !isProjectRowRight(project) && "right-6" } ${ isProjectRowRight(project) && "left-6" }`}
               src={`/projects/${ project.background_images[1] }`} 
               alt=""
               aria-hidden />

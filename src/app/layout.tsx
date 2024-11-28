@@ -10,6 +10,9 @@ import { Analytics } from "@vercel/analytics/react"
 export const metadata: Metadata = {
   title: "Raymart Pamplona",
   description: "Portfolio website of Raymart Pamplona",
+  verification: {
+    google: "YBkZ4SsoHYFK1HrKSsRCNsgHAvpwVgxQ7BM1pGM_oHA"
+  }
 };
 
 type RootLayoutProps = Readonly<{
